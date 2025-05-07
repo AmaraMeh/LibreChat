@@ -1,15 +1,11 @@
-   {
-     "version": 2,
-     "builds": [
-       {
-         "src": "api/server/index.js",
-         "use": "@vercel/node"
-       }
-     ],
-     "routes": [
-       {
-         "src": "/api/(.*)",
-         "dest": "api/server/index.js"
-       }
-     ]
-   }
+{
+  "buildCommand": "cd .. && npm install && npm run build:data-provider && npm run build:mcp && npm run build:data-schemas && cd client && npm install && npm run build",
+  "outputDirectory": "client/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
