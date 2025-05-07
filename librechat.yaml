@@ -1,0 +1,13 @@
+version: 1.2.1
+cache: true
+interface:
+  customWelcome: "Welcome to LibreChat!"
+  endpointsMenu: true
+  modelSelect: true
+  parameters: true
+  sidePanel: true
+  presets: true
+  prompts: true
+  bookmarks: true
+  multiConvo: true
+  agents: true
